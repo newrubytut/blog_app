@@ -1,0 +1,8 @@
+article class='detail-article'
+	h1 class='article-detail-title' = @article.title
+
+	div class='glyphicon glyphicon-calendar' id='article-date'
+		= @article.created_at.strftime("%b %d, %Y")
+
+	div class='article-body'
+		= @article.body
