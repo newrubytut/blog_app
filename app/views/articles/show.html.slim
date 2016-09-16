@@ -6,3 +6,5 @@ article class='detail-article'
 
 	div class='article-body'
 		= @article.body
+	
+	= link_to "Edit Article", edit_article_path(@article)
