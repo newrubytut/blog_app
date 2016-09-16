@@ -58,3 +58,4 @@ gem 'slim-rails'
 
 gem 'bootstrap-sass', "~>3.3.4.1"
 gem "autoprefixer-rails", "~>5.2.0"
+gem 'devise', '~>3.5.1'
