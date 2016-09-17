@@ -19,13 +19,18 @@ html
           ul.nav.navbar-nav
             li.active
               = link_to "Authors", "#"
+            - if user_signed_in?
+              .navbar-right
+                p.navbar-text
+                  | Signed in as #{current_user.email}
             li
               = link_to "Sign up", new_user_registration_path
+            li
+              =link_to "Sign in", new_user_session_path
     .container-fluid
       - flash.each do |name, msg|
-        |  <div class="alert alert-
-        ='#{name}'
-        | "> <a href="#" class='close' data-dismiss='alert' ×>
+        |  <div class="alert alert-#{name}">
+        |  <a href="#" class='close' data-dismiss='alert' &#215;>
         = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
     .row
       .col-md-10.col-md-offset-1
