@@ -12,6 +12,8 @@ header role="banner"
           li.active
             = link_to "Authors", "#"
           - if user_signed_in?
+            li
+              = link_to "Sign out", destroy_user_session_path, method: :delete
             .navbar-right
               p.navbar-text
                 | Signed in as #{current_user.email}
