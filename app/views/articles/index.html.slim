@@ -8,3 +8,7 @@ h1 Listing all Articles
 			= link_to article.title, article_path(article)
 		div class='article-body'
 			= truncate(article.body, length: 500)
+		.author
+			- if article.user
+				small
+					| Created by: #{article.user.email}
